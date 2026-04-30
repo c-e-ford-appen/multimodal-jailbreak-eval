@@ -48,11 +48,14 @@ cat("Unique participants:", length(unique(annotations$participant_id)), "\n")
 cat("Unique items (uid):", length(unique(annotations$uid)), "\n")
 
 # --- 2. Create item ID -------------------------------------------------------
-# Each unique combination of uid + model + modality is one rateable "item".
+# Each unique combination of uid + model + modality + language is one rateable
+# "item". Language must be included because en-US and es-MX raters evaluated
+# different language versions of the same prompt, so uid × model × modality
+# alone is not unique across the full dataset.
 annotations <- annotations |>
-  mutate(item_id = paste(uid, model, modality, sep = "_"))
+  mutate(item_id = paste(uid, model, modality, language, sep = "_"))
 
-cat("Unique items (uid × model × modality):", length(unique(annotations$item_id)), "\n\n")
+cat("Unique items (uid × model × modality × language):", length(unique(annotations$item_id)), "\n\n")
 
 # --- 3. Helper: build rater matrix from a subset ----------------------------
 make_matrix <- function(df) {
@@ -122,10 +125,9 @@ write.csv(alpha_by_modality, "irr_kripp_by_modality.csv", row.names = FALSE)
 
 # --- 9. Alpha by language ----------------------------------------------------
 alpha_by_language <- annotations |>
-  mutate(item_id = paste(uid, model, modality, language, sep = "_")) |>
   group_by(language) |>
   group_modify(~ {
-    mat <- make_matrix(mutate(.x, item_id = paste(uid, model, modality, language, sep = "_")))
+    mat <- make_matrix(.x)
     tibble(alpha = compute_kripp(mat))
   })
 
@@ -159,10 +161,9 @@ write.csv(alpha_by_model_modality, "irr_kripp_by_model_modality.csv", row.names 
 
 # --- 12. Alpha by model × language -------------------------------------------
 alpha_by_model_language <- annotations |>
-  mutate(item_id = paste(uid, model, modality, language, sep = "_")) |>
   group_by(model, language) |>
   group_modify(~ {
-    mat <- make_matrix(mutate(.x, item_id = paste(uid, model, modality, language, sep = "_")))
+    mat <- make_matrix(.x)
     tibble(alpha = compute_kripp(mat))
   })
 

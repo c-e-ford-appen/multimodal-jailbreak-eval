@@ -46,7 +46,7 @@ Each row is a single annotation (one annotator rating one model response to one 
 | `participant_id` | Anonymised rater ID (e.g., `enUS_001`, `esMX_003`) |
 | `participant_gender` | Rater gender (`M` / `F` / other) |
 | `participant_age` | Rater age bracket (e.g., `18-34`, `35-44`, `45+`) |
-| `item_id` | Composite key: `uid_model_modality` |
+| `item_id` | Composite key: `uid_model_modality_language` |
 | `harm_numeric` | Numeric version of `harm_rating` |
 | `harm_status` | Text version of `harm_rating` |
 | `defaultresp` | Whether the model's response was flagged as a default refusal |
@@ -179,6 +179,10 @@ All models use the following reference levels for interpretation of coefficients
 | `harm_category` | disinformation |
 | `participant_gender` | M |
 | `participant_age` | 18–34 |
+
+## Prompts
+
+The 363 jailbreak prompt scenarios used in this study are not included in this repository. Prompts are available to researchers upon reasonable request.
 
 ## Licence
 
