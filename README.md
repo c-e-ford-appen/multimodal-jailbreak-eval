@@ -182,7 +182,7 @@ All models use the following reference levels for interpretation of coefficients
 
 ## Prompts
 
-The 363 jailbreak prompt scenarios used in this study are not included in this repository. Prompts are available to researchers upon reasonable request.
+The 363 jailbreak prompt scenarios used in this study are not included in this repository. Beyond dual-use concerns inherent to publishing jailbreak stimuli, releasing the prompt set would risk benchmark contamination: if prompts enter post-training pipelines for future model generations, the benchmark loses its validity as a tool for longitudinal safety comparison. Preserving the integrity of the benchmark for future generational evaluation is a primary motivation for withholding the original prompt data. Researchers seeking access for legitimate evaluation purposes may contact the authors directly.
 
 ## Licence
 
