@@ -1,6 +1,6 @@
-# Multimodal Jailbreak Evaluation: US English and Mexican Spanish
+# Same Model, Different Weakness: How Language and Modality Reshape the Jailbreak Attack Surface on MLLMs
 
-This repository contains the data, analysis scripts, and pre-fitted model objects accompanying the paper **Same Model, Different Weakness: How Language and Modality Reshape the Jailbreak Attack Surface in Frontier MLLMs**, submitted for double-bind review to NeurIPS 2026.
+Anonymous submission for review.
 
 ## Overview
 
@@ -182,13 +182,18 @@ All models use the following reference levels for interpretation of coefficients
 | `participant_gender` | M |
 | `participant_age` | 18–34 |
 
-## Prompts
+## Adversarial Prompts
 
-The 363 jailbreak prompt scenarios used in this study are not included in this repository. Beyond dual-use concerns inherent to publishing jailbreak stimuli, releasing the prompt set would risk benchmark contamination: if prompts enter post-training pipelines for future model generations, the benchmark loses its validity as a tool for longitudinal safety comparison. Preserving the integrity of the benchmark for future generational evaluation is a primary motivation for withholding the original prompt data. Researchers seeking access for legitimate evaluation purposes may contact the authors directly.
+The original adversarial prompt texts are not included in this repository to prevent benchmark contamination. Prompts are available to reviewers upon request via the submission system.
+
+## Reproducibility
+
+R version 4.3+ is recommended. Key packages: `brms`, `ordinal`, `emmeans`, `irrCAC`, `irr`, `tidyverse`. brms requires a Stan backend — install `cmdstanr` or `rstan` before running scripts 01–04.
 
 ## Licence
 
-Data and code are provided for reproducibility purposes under the terms of the paper's review process. Please cite the paper if you use this material.
+**Code** (`analysis/`): MIT License — see `LICENSE-CODE`
 
+**Data** (`data/`): Creative Commons Attribution-NonCommercial 4.0 International — see `LICENSE-DATA`
 
-
+© 2026 Anonymous Authors. Licence files will be updated with author details following de-anonymisation.
