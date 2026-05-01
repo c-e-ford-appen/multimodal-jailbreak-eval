@@ -165,6 +165,8 @@ source("analysis/03_pairwise_harm_ratings.R")
 source("analysis/04_pairwise_asr.R")
 ```
 
+Note for reviewers: Some scripts include a redacted package repository URL. Replace with any CRAN mirror, e.g. https://cloud.r-project.org, or remove the repos argument entirely if a default is set in your R environment.
+
 ## Reference Levels
 
 All models use the following reference levels for interpretation of coefficients:
@@ -187,3 +189,6 @@ The 363 jailbreak prompt scenarios used in this study are not included in this r
 ## Licence
 
 Data and code are provided for reproducibility purposes under the terms of the paper's review process. Please cite the paper if you use this material.
+
+
+
