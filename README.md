@@ -1,6 +1,6 @@
-# Multimodal Jailbreak Evaluation: English and Mexican Spanish
+# Multimodal Jailbreak Evaluation: US English and Mexican Spanish
 
-This repository contains the data, analysis scripts, and pre-fitted model objects accompanying the paper **[Anonymous, 2026]**, submitted to NeurIPS 2026.
+This repository contains the data, analysis scripts, and pre-fitted model objects accompanying the paper **Same Model, Different Weakness: How Language and Modality Reshape the Jailbreak Attack Surface in Frontier MLLMs**, submitted for double-bind review to NeurIPS 2026.
 
 ## Overview
 
