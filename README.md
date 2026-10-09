@@ -1,7 +1,7 @@
 # Same Model, Different Weakness: How Language and Modality Reshape the Jailbreak Attack Surface on MLLMs
 
-Casey Ford, Madison Van Doren, Sicheng Jin & Emily Dix
-Appen
+Casey Ford, Madison Van Doren, Sicheng Jin, Riley VanMeter & Emily Dix
+Appen; The University of Chicago; The University of California, Berkeley.
 
 ## Overview
 
@@ -197,4 +197,4 @@ R version 4.3+ is recommended. Key packages: `brms`, `ordinal`, `emmeans`, `irrC
 
 **Data** (`data/`): Creative Commons Attribution-NonCommercial 4.0 International — see `LICENSE-DATA`
 
-© 2026 Casey Ford, Madison Van Doran, Sicheng Jin & Emily Dix, Appen.
+© 2026 Casey Ford, Madison Van Doren, Sicheng Jin, Riley VanMeter & Emily Dix, Appen.
