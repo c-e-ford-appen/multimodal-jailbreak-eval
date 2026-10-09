@@ -1,6 +1,7 @@
 # Same Model, Different Weakness: How Language and Modality Reshape the Jailbreak Attack Surface on MLLMs
 
 Casey Ford, Madison Van Doren, Sicheng Jin, Riley VanMeter & Emily Dix
+
 Appen; The University of Chicago; The University of California, Berkeley.
 
 ## Overview
